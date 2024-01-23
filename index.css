@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=Roboto:wght@100;300;400&display=swap');
 
 :root {
-    --primary-color: #e9280f;
+    --primary-color: #189C15;
     --primary-dark: #1F252E;
 }
 /*f9532d*/
@@ -179,17 +179,19 @@ li a:hover {
     overflow: hidden;
 }
 
-/* Estilizando a sub-tela */
 .sub-tela {
-    width: 300px; /* largura desejada */
-    height: 200px; /* altura desejada */
-    border: 1px solid #ccc;
+    width: 350px; 
+    height: 300px;
+    border: 1px transparent;
     border-radius: 5px;
-    overflow-y: scroll; /* Adiciona a barra de rolagem vertical */
+    overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
     padding: 10px;
 }
 .sub-tela p{
     padding: 10px 20px;
+    width: 100px;
     font-size: 16px;
     background-color: #28a517;
     color: #fff;
