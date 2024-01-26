@@ -6,9 +6,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="style.css">
     <link href="script.js">
     <title>Portfólio de Carlos Eduardo</title>
 </head>
@@ -31,6 +30,7 @@
                 <li><a href="#sobremim" onclick="mostrarOcultar('sobremim')" class="active_tag" style="--navAni:2">Sobre mim</a></li>
                 <li><a href="#skills" onclick="mostrarOcultar('skills')" class="active_tag" style="--navAni:3">Skills</a></li>
                 <li><a href="#projetos" onclick="mostrarOcultar('projetos')" class="active_tag" style="--navAni:4">projetos</a></li>
+                <li><a href="#solicitar_projetos" onclick="mostrarOcultar('solicitar_projetos')" class="active_tag" style="--navAni:4">Solicitar Projeto</a></li>
                 
             </ul>
             <label class="mode">
@@ -84,8 +84,22 @@
                     <p>CRUD com Django</p>
                     <p>Implementação de códigos de ML no snake-game <a href="https://github.com/EDUEIRDO/Python-Projects/tree/main/Games" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-circle-right"></i> </a></p>
                 </div>
-                
             </div>
+            <div id="solicitar_projetos" style="display: none;" class="detail" >
+                <h1>Contato</h1>
+                <form action="https://formsubmit.co/cadusilvateno@gmail.com" method="POST">
+                    <input type="hidden" name="_next" value="https://EDUEIRDO.github.io/index.html">
+                    <input type="text" name="name" placeholder="Digite seu nome" required>
+                    <input type="email" name="email" placeholder="Digite seu email" required>
+                    <textarea name="message" cols="30" rows="5"
+                    placeholder="Digite sua mensagem"></textarea>
+                    <button type="submit">Enviar</button>
+                    <input type="hidden" name="_subject" value="Nova solicitação!">
+                    <input type="text" name="_honey" style="display: none;">
+                    <input type="hidden" name="_captcha" value="false">
+                    
+               </form> 
+            
         </div>
     </section>
     <script>
@@ -99,7 +113,7 @@
     </script>
     <script>
         function mostrarOcultar(id) {
-            var elementos = document.querySelectorAll('[id^="inicio"], [id^="sobremim"], [id^="skills"], [id^="projetos"]');
+            var elementos = document.querySelectorAll('[id^="inicio"], [id^="sobremim"], [id^="skills"], [id^="projetos"], [id^="solicitar_projetos"]');
             elementos.forEach(function(elemento) {
                 elemento.style.display = "none";
             });
