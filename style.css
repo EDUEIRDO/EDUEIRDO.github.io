@@ -129,6 +129,12 @@ li a:hover {
     animation: topSideAni 1s ease forwards;
 }
 
+.main p{
+    color: #000;
+    opacity: 0;
+    animation: topSideAni 1s ease forwards;
+}
+
 .social {
     display: flex;
     flex-wrap: wrap;
@@ -207,6 +213,15 @@ li a:hover {
 
 #solicitarprojetos h1{
     color: #666;
+}
+
+.imgs-teste img{
+    width: 400px;
+    height: 300px;
+    border-radius: 15px;
+/*    flex-wrap: wrap;
+    padding: 10px;
+*/
 }
 
 form{
