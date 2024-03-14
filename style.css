@@ -24,7 +24,8 @@ body {
 
 .img-w {
     width: 100%;
-    height: auto;
+    height: 100%;
+    
 }
 
 /* Nav */
@@ -171,9 +172,6 @@ li a:hover {
     opacity: 0;
     animation: imageAni 1s ease forwards;
     animation-delay: 1.5s;
-}
-
-.images {
     background: linear-gradient(145deg, #e2e8ec, #ffffff);
     box-shadow: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;
     border-top: 2px solid var(--primary-color);
@@ -181,15 +179,17 @@ li a:hover {
     border-bottom-right-radius: 60px;
     margin: auto;
     overflow: hidden;
+    display: block;
 }
 
 .sub-tela {
+    
     width: 350px; 
     height: 300px;
     border: 1px transparent;
     border-radius: 5px;
     overflow-y: scroll;
-    display: flex;
+    display: block;
     flex-wrap: wrap;
     padding: 10px;
 }
@@ -216,12 +216,10 @@ li a:hover {
 }
 
 .imgs-teste img{
-    width: 400px;
-    height: 300px;
+    margin-top: 25px;
     border-radius: 15px;
-/*    flex-wrap: wrap;
-    padding: 10px;
-*/
+    width: 300px;
+    height: 400px;
 }
 
 form{

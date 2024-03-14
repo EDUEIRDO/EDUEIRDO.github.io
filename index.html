@@ -28,7 +28,8 @@
                 <li><a href="#inicio" onclick="mostrarOcultar('inicio')" class="active_tag" style="--navAni:1">Inicio</a></li>
                 <li><a href="#sobremim" onclick="mostrarOcultar('sobremim')" class="active_tag" style="--navAni:2">Sobre mim</a></li>
                 <li><a href="#skills" onclick="mostrarOcultar('skills')" class="active_tag" style="--navAni:3">Skills</a></li>
-                <li><a href="#projetos" onclick="mostrarOcultar('projetos')" class="active_tag" style="--navAni:4">Projetos e criações</a></li>
+                <li><a href="#projetos" onclick="mostrarOcultar('projetos')" class="active_tag" style="--navAni:4">Projetos</a></li>
+                <li><a href="#designs" onclick="mostrarOcultar('designs')" class="active_tag" style="--navAni:4">Designs</a></li>
                 <li><a href="#solicitar_projetos" onclick="mostrarOcultar('solicitar_projetos')" class="active_tag" style="--navAni:4">Solicitar Projeto</a></li>
             </ul>
             <label class="mode">
@@ -40,12 +41,9 @@
     <section class="container">
         <div class="main">
             
-            <div class="images">
-                <img src="imgs\me.jpeg" alt="Minha_foto" class="img-w">
-                <span class="bg-effect-1">
-                <span class="bg-effect-1"></span>
-                </span>
-            </div>
+                <div class="images">
+                    <img src="imgs\me.jpeg" alt="Minha_foto" class="img-w">
+                </div>
             <div id="inicio" class="detail">
                 <h3>Olá, Eu sou</h3>
                 <h1><span style="color:#f9532d;">Carlos</span> <span style="color: #189C15;">Eduardo</span></h1>
@@ -81,11 +79,14 @@
                     <p>CRUD com Django</p>
                     <p>Implementação de códigos de ML no snake-game <a href="https://github.com/EDUEIRDO/Python-Projects/tree/main/Games" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-circle-right"></i> </a></p>
                 </div>
-            <h1>designs: </h1>
-                <div class="imgs-teste">
-                    <img src="imgs\ktc-opengraph-solutions-gaming-time-to-upgrade-your-pc-build.webp" alt="teste">
-                </div>
             </div>
+        <div id="designs" style="display: none;" class="detail">
+            <h1>designs: </h1>
+            <div class="imgs-teste">
+                <img src="imgs\designs\Anúncio-app.png" alt="">
+                <img src="imgs\designs\Re-design.png" alt="">
+            </div>
+        </div>
 
         <div id="solicitar_projetos" style="display: none;" class="detail" >
                 <h1>Contato</h1>
@@ -114,7 +115,7 @@
     </script>
     <script>
         function mostrarOcultar(id) {
-            var elementos = document.querySelectorAll('[id^="inicio"], [id^="sobremim"], [id^="skills"], [id^="projetos"], [id^="solicitar_projetos"]');
+            var elementos = document.querySelectorAll('[id^="inicio"], [id^="sobremim"], [id^="skills"], [id^="projetos"], [id^="solicitar_projetos"], [id^="designs"]');
             elementos.forEach(function(elemento) {
                 elemento.style.display = "none";
             });
