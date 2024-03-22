@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Portfólio de Carlos Eduardo</title>
+</head>
+<body>
+    <header class="container">
+        <div class="page-header">
+            <div class="logo">
+                <a><span style="color: #F2C53D;">Designer</span> e <span style="color: #189C15;">Programador</span></a>
+            </div>
+            <input type="checkbox" id="click">
+
+            <label for="click" class="mainicon">
+                <div class="menu">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </label>
+            <ul>
+                <li><a href="#inicio" onclick="mostrarOcultar('inicio')" class="active_tag" style="--navAni:1">Inicio</a></li>
+                <li><a href="#sobremim" onclick="mostrarOcultar('sobremim')" class="active_tag" style="--navAni:2">Sobre mim</a></li>
+                <li><a href="#skills" onclick="mostrarOcultar('skills')" class="active_tag" style="--navAni:3">Skills</a></li>
+                <li><a href="#projetos" onclick="mostrarOcultar('projetos')" class="active_tag" style="--navAni:4">Projetos</a></li>
+                <li><a href="#solicitar_projetos" onclick="mostrarOcultar('solicitar_projetos')" class="active_tag" style="--navAni:4">Solicitar Projeto</a></li>
+            </ul>
+            <label class="mode">
+                <input type="checkbox" id="darkModeToggle">
+                <i class='bx bxs-moon'></i>
+            </label>
+        </div>
+    </header>
+    <section class="container">
+        <div class="main">
+            
+                <div class="images">
+                    <img src="{% static 'img/me.jpeg' %}" alt="Minha_foto" class="img-w">
+                </div>
+            <div id="inicio" class="detail">
+                <h3>Olá, Eu sou</h3>
+                <h1><span style="color:#f9532d;">Carlos</span> <span style="color: #189C15;">Eduardo</span></h1>
+                <h3>Sou <span style="color: #F2CF1D;">Designer</span> e desenvolvedor <span style="color:#245076;">Py</span>th<span style="color:#EFCA33;">on</span> Junior.</h3>
+
+                <div id="#" class="social">
+                    <a href="www.linkedin.com/in/carlos-tenório-00b75b286" style="--socialAni:1"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://www.instagram.com/edueirdoo/" style="--socialAni:2"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://github.com/EDUEIRDO" style="--socialAni:3"><i class='bx bxl-github'></i></a>
+                    <a href="mailto:cadusilvateno@gmail.com" style="--socialAni:4"><i class='bx bxl-gmail'></i></a>
+                </div>
+            </div>
+
+            <div id="sobremim" style="display: none;" class="detail">
+                <h1>Me chamo <span style="color: #f9532d;">Carlos</span> <span style="color: #189C15;">Eduardo</span>,</h1>
+                <p>Tenho 19 anos, atualmente estou programando em python, também produzo designs no Adobe Photoshop e Figma.</p>
+            </div>
+
+            <div id="skills" style="display: none;" class="detail">
+                <h1>Habilidades: </h1>
+                <p>Usando Python, posso colocar em pratica projetos <span style="color: green;">Back-End</span>, <span style="color: #245076;">Automações</span> e <span style="color: crimson;">Machine Learning</span>.</p>
+                <p>Além do vasto conhecimentoem Python e seus frameworks como Django, Flask, Tensorflow, Keras, Pandas e Matplotlib, Tenho conhecimento sobre a linguagem Java e seu framework Spring.</p>
+            </div>
+            <div id="projetos" style="display: none;" class="detail">
+            <h1>Projetos: </h1>
+                <div class="sub-tela">
+                    <p>Portfólio <a href="https://github.com/EDUEIRDO/EDUEIRDO.github.io" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-circle-right"></i> </a></p>
+                    <p>Algoritmo de classificação de imagem com TensorFlow <a href="https://colab.research.google.com/drive/1Ou6cbOPMaCr10hpCTvCh0NQ6KrTiFWbz#scrollTo=9CpRQgmurGnQ&uniqifier=1" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-circle-right"></i> </a></p>
+                    <p>Criptografia com Python <a href="https://github.com/EDUEIRDO/cryptography-with-python" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-circle-right"></i> </a></p>
+                    <h2>Em desenvolvimento: </h2>
+                    <p>CRUD com interface feita com Python e Mysql <a href="https://github.com/EDUEIRDO/CRUD-with-customtkinter" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-circle-right"></i> </a></p>
+                    <p>Projeto de adoção de pets feito com Django <a href="https://github.com/EDUEIRDO/Abrigo-amigo-site" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-circle-right"></i></a></p>
+                    <p>Bot para o Telegram <a href="https://github.com/EDUEIRDO/Teste-telegram-bot" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-circle-right"></i> </a></p>
+                    <p>Implementação de códigos de ML no snake-game <a href="https://github.com/EDUEIRDO/Python-Projects/tree/main/Games" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-circle-right"></i> </a></p>
+                </div>
+            </div>
+
+        <div id="solicitar_projetos" style="display: none;" class="detail" >
+                <h1>Contato</h1>
+                <form action="https://formsubmit.co/cadusilvateno@gmail.com" method="POST">
+                    <input type="hidden" name="_next" value="https://EDUEIRDO.github.io/index.html">
+                    <input type="text" name="name" placeholder="Digite seu nome" required>
+                    <input type="email" name="email" placeholder="Digite seu email" required>
+                    <textarea name="message" cols="30" rows="5"
+                    placeholder="Digite sua mensagem"></textarea>
+                    <button type="submit">Enviar</button>
+                    <input type="hidden" name="_subject" value="Nova solicitação!">
+                    <input type="text" name="_honey" style="display: none;">
+                    <input type="hidden" name="_captcha" value="false">  
+               </form> 
+            </div>
+    </section>
+    <script>
+        const tags = document.querySelectorAll('.active_tag');
+        tags.forEach(tag => {
+            tag.addEventListener('click', function() {
+                tags.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+    <script>
+        function mostrarOcultar(id) {
+            var elementos = document.querySelectorAll('[id^="inicio"], [id^="sobremim"], [id^="skills"], [id^="projetos"], [id^="solicitar_projetos"], [id^="designs"]');
+            elementos.forEach(function(elemento) {
+                elemento.style.display = "none";
+            });
+            
+            var divSelecionada = document.getElementById(id);
+            if (divSelecionada) {
+                divSelecionada.style.display = "block";
+            }
+        }
+    </script>
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    </script>
+    <script>
+        const tagsMenu = document.querySelectorAll('header ul li a');
+
+        const checkboxClick = document.getElementById('click');
+
+        const menuUl = document.querySelector('header ul');
+
+        function ocultarMenu() {
+            menuUl.style.left = '-100%';
+        }
+
+        function exibirMenu() {
+            menuUl.style.left = '0%';
+        }
+
+        tagsMenu.forEach(tag => {
+            tag.addEventListener('click', function() {
+                ocultarMenu();
+                checkboxClick.checked = false; 
+            });
+        });
+
+        checkboxClick.addEventListener('click', function() {
+            if (this.checked) {
+                exibirMenu();
+            }
+        });
+    </script>
+</body>
+</html>
