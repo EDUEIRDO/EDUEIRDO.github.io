@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-{% load static %}
 <html lang="pt-BR">
 
 <head>
@@ -8,14 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="style.css">
+    <link href="script.js">
     <title>Portfólio de Carlos Eduardo</title>
 </head>
 <body>
     <header class="container">
         <div class="page-header">
             <div class="logo">
-                <a><span style="color: #F2C53D;">Designer</span> e <span style="color: #189C15;">Programador</span></a>
+                <a>Designer e Programador</a>
             </div>
             <input type="checkbox" id="click">
 
@@ -41,7 +41,7 @@
         <div class="main">
             
                 <div class="images">
-                    <img src="{% static 'img/me.jpeg' %}" alt="Minha_foto" class="img-w">
+                    <img src="imgs\me.jpeg" alt="Minha_foto" class="img-w">
                 </div>
             <div id="inicio" class="detail">
                 <h3>Olá, Eu sou</h3>
@@ -163,5 +163,7 @@
             }
         });
     </script>
+
 </body>
+
 </html>
