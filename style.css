@@ -131,7 +131,6 @@ li a:hover {
 }
 
 .main p{
-    color: #000;
     opacity: 0;
     animation: topSideAni 1s ease forwards;
 }
@@ -211,8 +210,8 @@ li a:hover {
     color: #000000; 
 }
 
-#solicitarprojetos h1{
-    color: #666;
+#solicitar_projetos button{
+    cursor: pointer;
 }
 
 .imgs-teste img{
