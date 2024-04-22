@@ -182,28 +182,27 @@ li a:hover {
 }
 
 .sub-tela {
-    
-    width: 350px; 
+    width: 250px; 
     height: 300px;
-    border: 1px transparent;
     border-radius: 5px;
     overflow-y: scroll;
     display: block;
     flex-wrap: wrap;
     padding: 10px;
 }
-.sub-tela p{
-    padding: 10px 20px;
-    width: 100px;
+.sub-tela button{
+    width: 90%;
+    margin-top: 10px;
     font-size: 16px;
     background-color: #28a517;
     color: #fff;
     border: none;
+    cursor: pointer;
     border-radius: 5px;
     transition: transform 0.3s ease-in-out;
-    margin: 10px;
+
 }
-.sub-tela p:hover{
+.sub-tela button:hover{
     transform: scale(1.1);
 }
 .icone {
@@ -212,13 +211,6 @@ li a:hover {
 
 #solicitar_projetos button{
     cursor: pointer;
-}
-
-.imgs-teste img{
-    margin-top: 25px;
-    border-radius: 15px;
-    width: 300px;
-    height: 400px;
 }
 
 form{
@@ -242,7 +234,7 @@ input, textarea, button{
     width: 100%;
 }
 button{
-    cursor: pointed;
+    cursor: pointer;
     font-weight: bold;
 }
 /* Section 1 End */
