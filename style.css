@@ -84,14 +84,21 @@ li a.active,
 li a:hover {
     color: var(--primary-color);
 }
+#menu {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+  }
+  
+  #menu a {
+    display: block;
+    padding: 0.5rem;
+  }
+  
 
-#click {
+#btn-mobile {
     display: none;
-}
-
-.menu {
-    display: none;
-}
+  }
 
 .mode i {
     font-size: 1.4rem;
@@ -384,33 +391,62 @@ button{
         height: auto;
     }
 
-    ul {
-        background: #fff;
-        width: 100%;
-        height: 100vh;
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        top: 3.4rem;
-        left: -100%;
-        z-index: 111111;
-    }
-
-    .menu {
+    #menu {
         display: block;
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: var(--primary-color);
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0px;
+        transition: 0.6s;
+        z-index: 1000;
+        height: 0px;
+        visibility: hidden;
+        overflow-y: hidden;
     }
-
-    #click:checked~ul {
-        left: 0%;
-        transition: all 0.3s ease;
+    #nav.active #menu {
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+        background-color: white;
     }
-
-    .dark-mode .menu {
-        color: var(--primary-color);
+    #menu a {
+        padding: 1rem 0;
+        margin: 0 1rem;
+    }
+    #btn-mobile {
+        display: flex;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: 0.5rem;
+    }
+    #hamburger {
+        border-top: 2px solid;
+        width: 20px;
+        margin-right: -15px;
+    }
+    #hamburger::after,
+    #hamburger::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: 0.3s;
+        position: relative;
+    }
+    #nav.active #hamburger {
+        border-top-color: transparent;
+    }
+    #nav.active #hamburger::before {
+        transform: rotate(135deg);
+    }
+    #nav.active #hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
     }
 
     .dark-mode ul {

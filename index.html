@@ -16,20 +16,17 @@
             <div class="logo">
                 <a>Desenvolvedor</a>
             </div>
-            <input type="checkbox" id="click">
-
-            <label for="click" class="mainicon">
-                <div class="menu">
-                    <i class='bx bx-menu'></i>
-                </div>
-            </label>
-            <ul>
-                <li><a href="#inicio" onclick="mostrarOcultar('inicio')" class="active_tag" style="--navAni:1">Inicio</a></li>
-                <li><a href="#sobremim" onclick="mostrarOcultar('sobremim')" class="active_tag" style="--navAni:2">Sobre mim</a></li>
-                <li><a href="#skills" onclick="mostrarOcultar('skills')" class="active_tag" style="--navAni:3">Skills</a></li>
-                <li><a href="#projetos" onclick="mostrarOcultar('projetos')" class="active_tag" style="--navAni:4">Projetos</a></li>
-                <li><a href="#solicitar_projetos" onclick="mostrarOcultar('solicitar_projetos')" class="active_tag" style="--navAni:4">Solicitar Projeto</a></li>
-            </ul>
+            <nav id="nav">
+              <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+                <span id="hamburger"></span>
+              </button>
+              <ul id="menu" role="menu">
+                    <li><a href="#inicio" onclick="mostrarOcultar('inicio')" class="active_tag" style="--navAni:1">Inicio</a></li>
+                    <li><a href="#sobremim" onclick="mostrarOcultar('sobremim')" class="active_tag" style="--navAni:2">Sobre mim</a></li>
+                    <li><a href="#skills" onclick="mostrarOcultar('skills')" class="active_tag" style="--navAni:3">Skills</a></li>
+                    <li><a href="#projetos" onclick="mostrarOcultar('projetos')" class="active_tag" style="--navAni:4">Projetos</a></li>
+                    <li><a href="#solicitar_projetos" onclick="mostrarOcultar('solicitar_projetos')" class="active_tag" style="--navAni:4">Solicitar Projeto</a></li>
+            </nav>
             <label class="mode">
                 <input type="checkbox" id="darkModeToggle">
                 <i class='bx bxs-moon'></i>
@@ -114,6 +111,8 @@
     <script>
         const darkModeToggle = document.getElementById('darkModeToggle');
         const body = document.body;
+        const menu = document.getElementById('menu');
+
         const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
         if (isDarkMode) {
             body.classList.add('dark-mode');
@@ -123,41 +122,15 @@
             if (darkModeToggle.checked) {
                 body.classList.add('dark-mode');
                 localStorage.setItem('darkMode', 'enabled');
+                menu.style.backgroundColor = '#1F252E';
             } else {
                 body.classList.remove('dark-mode');
                 localStorage.setItem('darkMode', 'disabled');
+                menu.style.backgroundColor = '#fff';
             }
         });
     </script>
-    <script>
-        const tagsMenu = document.querySelectorAll('header ul li a');
-
-        const checkboxClick = document.getElementById('click');
-
-        const menuUl = document.querySelector('header ul');
-
-        function ocultarMenu() {
-            menuUl.style.left = '-100%';
-        }
-
-        function exibirMenu() {
-            menuUl.style.left = '0%';
-        }
-
-        tagsMenu.forEach(tag => {
-            tag.addEventListener('click', function() {
-                ocultarMenu();
-                checkboxClick.checked = false; 
-            });
-        });
-
-        checkboxClick.addEventListener('click', function() {
-            if (this.checked) {
-                exibirMenu();
-            }
-        });
-    </script>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
