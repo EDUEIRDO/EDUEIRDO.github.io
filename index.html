@@ -25,7 +25,9 @@
                     <li><a href="#sobremim" onclick="mostrarOcultar('sobremim')" class="active_tag" style="--navAni:2">Sobre mim</a></li>
                     <li><a href="#skills" onclick="mostrarOcultar('skills')" class="active_tag" style="--navAni:3">Skills</a></li>
                     <li><a href="#projetos" onclick="mostrarOcultar('projetos')" class="active_tag" style="--navAni:4">Projetos</a></li>
-                    <li><a href="#solicitar_projetos" onclick="mostrarOcultar('solicitar_projetos')" class="active_tag" style="--navAni:4">Solicitar Projeto</a></li>
+                    <li><a href="#experiencias" onclick="mostrarOcultar('experiencias')" class="active_tag" style="--navAni:5">Experiencias</a></li>
+                    <li><a href="#solicitar_projetos" onclick="mostrarOcultar('solicitar_projetos')" class="active_tag" style="--navAni:6">Solicitar Projeto</a></li>
+                    
             </nav>
             <label class="mode">
                 <input type="checkbox" id="darkModeToggle">
@@ -41,7 +43,7 @@
             <div id="inicio" class="detail">
                 <h3>Olá, Eu sou</h3>
                 <h1><span style="color:#f9532d;">Carlos</span> <span style="color: #189C15;">Eduardo</span></h1>
-                <h3>Sou Designer e desenvolvedor <span style="color:#245076;">Py</span>th<span style="color:#EFCA33;">on</span> Junior.</h3>
+                <h3>Sou Designer e desenvolvedor <span style="color:#245076;">Py</span>th<span style="color:#EFCA33;">on</span>.</h3>
                 <div id="#" class="social">
                     <a href="https://www.linkedin.com/in/carlos-ten%C3%B3rio/" style="--socialAni:1"><i class='bx bxl-linkedin'></i></a>
                     <a href="https://www.instagram.com/dev.edueirdo/" style="--socialAni:2"><i class='bx bxl-instagram'></i></a>
@@ -71,7 +73,15 @@
                     <a href="https://github.com/EDUEIRDO/Teste-telegram-bot" target="_blank" rel="noopener noreferrer"><button>Bot para o Telegram</button></a>
                 </div>
             </div>
-        <div id="solicitar_projetos" style="display: none;" class="detail" >
+            <div id="experiencias" style="display: none;">
+                <h1>Ainda em desenvolvimento.</h1>
+                <h1>Minhas Experiências: </h1>
+                <p>Criação e administração de um servidor para um jogo online</p> <br>
+                <p>Criação e edição de scripts em .lua</p><br>
+                <p></p>
+
+            </div>
+            <div id="solicitar_projetos" style="display: none;" class="detail" >
                 <h1>Contato</h1>
                 <form action="https://formsubmit.co/cadusilvateno@gmail.com" method="POST">
                     <input type="hidden" name="_next" value="https://EDUEIRDO.github.io/index.html">
@@ -97,7 +107,7 @@
     </script>
     <script>
         function mostrarOcultar(id) {
-            var elementos = document.querySelectorAll('[id^="inicio"], [id^="sobremim"], [id^="skills"], [id^="projetos"], [id^="solicitar_projetos"], [id^="designs"]');
+            var elementos = document.querySelectorAll('[id^="inicio"], [id^="sobremim"], [id^="skills"], [id^="projetos"], [id^="experiencias"], [id^="solicitar_projetos"]');
             elementos.forEach(function(elemento) {
                 elemento.style.display = "none";
             });
