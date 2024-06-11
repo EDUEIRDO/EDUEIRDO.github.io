@@ -54,7 +54,16 @@ header {
 .logo a {
     color: #000;
     text-decoration: none;
+    transition: .3s;
+    opacity: 0;
+    animation: navani .3s ease forwards;
+    animation-delay: calc(.15s * var(--navAni));
 }
+.logo a.active,
+.logo a:hover {
+    color: var(--primary-color);
+}
+
 
 ul {
     display: flex;
