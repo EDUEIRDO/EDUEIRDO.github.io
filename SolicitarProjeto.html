@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imgs/android-chrome-512x512-removebg-preview.png" type="image/x-icon">
+    <title>Solicite agora seu projeto</title>
+</head>
+<body>
+    <header class="container">
+        <div class="page-header">
+            <div class="logo">
+            <a href="arqv/Carlos Eduardo Da Silva Tenório - Currículo.pdf" download="Currículo-Carlos-Eduardo" class="active_tag">Baixar currículo</a>
+            </div>
+            <nav id="nav">
+            <label class="mode">
+                <input type="checkbox" id="darkModeToggle">
+                <i class='bx bxs-moon'></i>
+            </label>
+        </div>
+    </header>
+    <section class="container">
+        <div class="main">
+
+            <div id="solicitar_projetos" class="img-w" >
+                <h1>Contato:</h1>
+                <div class="social">
+                    <h2 style="--socialAni:2">Fale comigo no whatsapp</h2>
+                    <a href="https://wa.me/5587999788963?text=Ol%C3%A1%2C%20estou%20interessado%20em%20seus%20servi%C3%A7os" style="--socialAni:1" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+                </div>
+                <h1>Ou preencha o formulario</h1>   
+                <form action="https://formsubmit.co/cadusilvateno@gmail.com" method="POST">
+                    <input type="hidden" name="_next" value="https://EDUEIRDO.github.io/index.html">
+                    <input type="text" name="name" placeholder="Digite seu nome" required autocomplete="name">
+                    <input type="email" name="email" placeholder="Digite seu email" required autocomplete="email">
+                    <textarea name="message" cols="30" rows="5"
+                    placeholder="Digite sua mensagem"></textarea>
+                    <button type="submit">Enviar</button>
+                    <input type="hidden" name="_subject" value="Nova solicitação!">
+                    <input type="text" name="_honey" style="display: none;">
+                    <input type="hidden" name="_captcha" value="false">
+               </form> 
+            </div>
+    </section>
+    <script>
+        const tags = document.querySelectorAll('.active_tag');
+        tags.forEach(tag => {
+            tag.addEventListener('click', function() {
+                tags.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+    <script>
+        function mostrarOcultar(id) {
+            var elementos = document.querySelectorAll('[id^="inicio"], [id^="sobremim"], [id^="skills"], [id^="projetos"], [id^="experiencias"], [id^="solicitar_projetos"]');
+            elementos.forEach(function(elemento) {
+                elemento.style.display = "none";
+            });
+            
+            var divSelecionada = document.getElementById(id);
+            if (divSelecionada) {
+                divSelecionada.style.display = "block";
+            }
+        }
+    </script>
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        const menu = document.getElementById('menu');
+
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+                menu.style.backgroundColor = '#1F252E';
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+                menu.style.backgroundColor = '#fff';
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
