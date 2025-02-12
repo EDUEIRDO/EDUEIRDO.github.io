@@ -14,47 +14,40 @@
     <header class="container">
         <div class="page-header">
             <div class="logo">
-            <!--<a href="arqv/Carlos Eduardo Da Silva Tenório - Currículo.pdf" download="Currículo-Carlos-Eduardo" class="active_tag">Baixar currículo</a>-->
             </div>
             <nav id="nav">
-              <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
-                <span id="hamburger"></span>
-              </button>
               <ul id="menu" role="menu">
                     <li><a href="#inicio" onclick="mostrarOcultar('inicio')"  style="--navAni:1">Inicio</a></li>
                     <li><a href="#sobremim" onclick="mostrarOcultar('sobremim')" class="active_tag" style="--navAni:2">Sobre mim</a></li>
                     <li><a href="#skills" onclick="mostrarOcultar('skills')" class="active_tag" style="--navAni:3">Skills</a></li>
                     <li><a href="#projetos" onclick="mostrarOcultar('projetos')" class="active_tag" style="--navAni:4">Projetos</a></li>
                     <li><a href="#experiencias" onclick="mostrarOcultar('experiencias')" class="active_tag" style="--navAni:5">Experiencias</a></li>
-                    <li><a href="SolicitarProjeto.html" onclick="mostrarOcultar('solicitar_projetos')" class="active_tag" style="--navAni:6">Solicitar Projeto</a></li>
-                    
+                    <li><a href="SolicitarProjeto.html" onclick="mostrarOcultar('solicitar_projetos')" class="active_tag" style="--navAni:6">Solicitar Projeto</a></li>  
             </nav>
-            <label class="mode">
-                <input type="checkbox" id="darkModeToggle">
-                <i class='bx bxs-moon'></i>
-            </label>
         </div>
     </header>
     <section class="container">
         <div class="main">
-                <div class="images">
-                    <img src="imgs\me.jpeg" alt="Minha_foto" class="img-w">
-                </div>
             <div id="inicio" class="detail">
-                <h3>Olá, Eu sou</h3>
+                <div class="images">
+                    <h1 class="img-w">Em breve</h1>
+                    <!-- <img src="imgs\me.jpeg" alt="profile_photo" class="img-w">-->
+                </div>
+                <h3>Bem-vindo ao meu Portfólio, me chamo</h3>
                 <h1><span style="color:#f9532d;">Carlos</span> <span style="color: #189C15;">Eduardo</span>,</h1>
-                <h3>Sou Designer e desenvolvedor <span style="color:#245076;">Py</span>th<span style="color:#F0CA33;">on</span><span style="color: #189C15;">/</span>Java<span style="color: #F2CF1D;">Script</span>.</h3>
+                <h3>Sou Desenvolvedor de aplicativos, sistemas e sites.</h3>
                 <div id="#" class="social">
-                    <a href="https://www.linkedin.com/in/carlos-ten%C3%B3rio/" style="--socialAni:1"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://www.linkedin.com/in/carlos-tenório-a00573345" style="--socialAni:1"><i class='bx bxl-linkedin'></i></a>
                     <a href="https://www.instagram.com/dev.edueirdo/" style="--socialAni:2"><i class='bx bxl-instagram'></i></a>
                     <a href="https://github.com/EDUEIRDO" style="--socialAni:3"><i class='bx bxl-github'></i></a>
-                    <a href="mailto:cadusilvateno@gmail.com" style="--socialAni:4"><i class='bx bxl-gmail'></i></a>
-                    
+                    <a href="mailto:dev.edueirdo@gmail.com" style="--socialAni:4"><i class='bx bxl-gmail'></i></a>
                 </div>
             </div>
             <div id="sobremim" style="display: none;" class="detail">
                 <h1>Me chamo <span style="color: #f9532d;">Carlos</span> <span style="color: #189C15;">Eduardo</span>,</h1>
-                <p>Tenho 19 anos, atualmente estou programando em Python e JavaScript, também produzo designs no Adobe Photoshop e Figma.</p>
+                <p>Tenho 20 anos, desde novo fui fascinado por tecnologia, tenho facilidade em aprender e com isso me destaco. Comecei a programar no final de 2022, ainda no ensino medio, começando com Python e Java onde aprendi a logica e desenvolvi meus primeiros programas(Calculadoras e Bots).
+                    Após o ensino medio, ingressei em um curso técnico de Desenvolvimento de Sistemas.
+                </p>
             </div>
 
             <div id="skills" style="display: none;" class="detail">
@@ -79,7 +72,7 @@
             <div id="experiencias" style="display: none;">
                 <h1>Minhas Experiências: </h1>
                 <ul>
-                    <li>Participação de 3 meses em uma Startup, onde participei de uma equipe de desenvolvimento no qual foi desenvolvido um aplicativo mobile desenvolvido em React-Native.</li>
+                    <li>Participação de 6 meses em uma Startup, onde participei de uma equipe de desenvolvimento no qual foi desenvolvido um aplicativo mobile desenvolvido em React-Native.</li>
                     
                 </ul>
             </div>
@@ -105,28 +98,6 @@
                 divSelecionada.style.display = "block";
             }
         }
-    </script>
-    <script>
-        const darkModeToggle = document.getElementById('darkModeToggle');
-        const body = document.body;
-        const menu = document.getElementById('menu');
-
-        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
-        if (isDarkMode) {
-            body.classList.add('dark-mode');
-            darkModeToggle.checked = true;
-        }
-        darkModeToggle.addEventListener('change', () => {
-            if (darkModeToggle.checked) {
-                body.classList.add('dark-mode');
-                localStorage.setItem('darkMode', 'enabled');
-                menu.style.backgroundColor = '#1F252E';
-            } else {
-                body.classList.remove('dark-mode');
-                localStorage.setItem('darkMode', 'disabled');
-                menu.style.backgroundColor = '#fff';
-            }
-        });
     </script>
     <script src="script.js"></script>
 </body>
