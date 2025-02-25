@@ -25,7 +25,7 @@ body {
 .img-w {
     width: 100%;
     height: 100%;
-    
+
 }
 
 /* Nav */
@@ -100,7 +100,7 @@ li a:hover {
     list-style: none;
     gap: 0.5rem;
   }
-  
+
   #menu a {
     display: block;
     padding: 0.5rem;
@@ -187,7 +187,7 @@ li a:hover {
 }
 
 .sub-tela {
-    width: 250px; 
+    width: 250px;
     height: 300px;
     border-radius: 5px;
     overflow-y: scroll;
@@ -211,7 +211,7 @@ li a:hover {
     transform: scale(1.1);
 }
 .icone {
-    color: #000000; 
+    color: #000000;
 }
 
 #solicitar_projetos button{
@@ -220,7 +220,7 @@ li a:hover {
 
 form{
     border-radius: 5px;
-    
+
     display: flex;
     flex-direction: column;
     gap: 10px;

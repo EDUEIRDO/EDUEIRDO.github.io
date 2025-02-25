@@ -20,9 +20,9 @@
                     <li><a href="#inicio" onclick="mostrarOcultar('inicio')"  style="--navAni:1">Inicio</a></li>
                     <li><a href="#sobremim" onclick="mostrarOcultar('sobremim')" class="active_tag" style="--navAni:2">Sobre mim</a></li>
                     <li><a href="#skills" onclick="mostrarOcultar('skills')" class="active_tag" style="--navAni:3">Skills</a></li>
-                    <li><a href="#projetos" onclick="mostrarOcultar('projetos')" class="active_tag" style="--navAni:4">Projetos</a></li>
+                    <li><a href="#projeto" onclick="mostrarOcultar('projeto')" class="active_tag" style="--navAni:4">Projetos</a></li>
                     <li><a href="#experiencias" onclick="mostrarOcultar('experiencias')" class="active_tag" style="--navAni:5">Experiencias</a></li>
-                    <li><a href="SolicitarProjeto.html" onclick="mostrarOcultar('solicitar_projetos')" class="active_tag" style="--navAni:6">Solicitar Projeto</a></li>  
+                    <li><a href="SolicitarProjeto.html" onclick="mostrarOcultar('solicitar_projetos')" class="active_tag" style="--navAni:6">Solicitar Projeto</a></li>
             </nav>
         </div>
     </header>
@@ -30,8 +30,7 @@
         <div class="main">
             <div id="inicio" class="detail">
                 <div class="images">
-                    <h1 class="img-w">Em breve</h1>
-                    <!-- <img src="imgs\me.jpeg" alt="profile_photo" class="img-w">-->
+                    <img src="imgs/Untitled.jpg" alt="profile_photo" class="img-w">
                 </div>
                 <h3>Bem-vindo ao meu Portfólio, me chamo</h3>
                 <h1><span style="color:#f9532d;">Carlos</span> <span style="color: #189C15;">Eduardo</span>,</h1>
@@ -45,19 +44,19 @@
             </div>
             <div id="sobremim" style="display: none;" class="detail">
                 <h1>Me chamo <span style="color: #f9532d;">Carlos</span> <span style="color: #189C15;">Eduardo</span>,</h1>
-                <p>Tenho 20 anos, desde novo fui fascinado por tecnologia, tenho facilidade em aprender e com isso me destaco. Comecei a programar no final de 2022, ainda no ensino medio, começando com Python e Java onde aprendi a logica e desenvolvi meus primeiros programas(Calculadoras e Bots).
-                    Após o ensino medio, ingressei em um curso técnico de Desenvolvimento de Sistemas.
-                </p>
+                <p>Sou desenvolvedor de software com experiência em aplicações web e mobile. Meu interesse por tecnologia começou cedo, mas foi no final de 2022 que iniciei minha jornada na programação com Python e Java. Aprendi lógica de programação desenvolvendo pequenos projetos como calculadoras e bots.
+Atualmente, sigo aprimorando minhas habilidades para criar soluções inovadoras para o mundo real.</p>
             </div>
 
             <div id="skills" style="display: none;" class="detail">
                 <h1>Habilidades: </h1>
-                <p>Usando Python, posso colocar em pratica projetos <span style="color: green;">Back-End</span>, <span style="color: #245076;">Automações</span> e <span style="color: crimson;">Machine Learning</span>.</p>
-                <p>Além do conhecimento em seus frameworks como Django, Tensorflow e Keras.</p> <br>
-                <h2>Informações adicionais:</h2> <br>
-                <p>Com JavaScript, faço projetos back-end, Apps para celular com React-Native, </p>
+                <li>teste</li>
+                Domínio de linguagens de programação: C, Python, TypeScript, JavaScript.
+                Infraestrutura: Redes, cabeamento estruturado, servidores.
+                Facilidade em transmitir conhecimento e mentorias.
+                Capacidade analítica, proatividade e resolução de problemas.
             </div>
-            <div id="projetos" style="display: none;" class="detail">
+            <div id="projeto" style="display: none;" class="detail">
             <h1>Projetos: </h1>
                 <div class="sub-tela">
                     <a href="https://github.com/EDUEIRDO/EDUEIRDO.github.io" target="_blank" rel="noopener noreferrer"><button>Portfólio SPA(Single Page Aplication)</button></a>
@@ -73,7 +72,7 @@
                 <h1>Minhas Experiências: </h1>
                 <ul>
                     <li>Participação de 6 meses em uma Startup, onde participei de uma equipe de desenvolvimento no qual foi desenvolvido um aplicativo mobile desenvolvido em React-Native.</li>
-                    
+
                 </ul>
             </div>
     </section>
@@ -88,11 +87,11 @@
     </script>
     <script>
         function mostrarOcultar(id) {
-            var elementos = document.querySelectorAll('[id^="inicio"], [id^="sobremim"], [id^="skills"], [id^="projetos"], [id^="experiencias"], [id^="solicitar_projetos"]');
+            var elementos = document.querySelectorAll('[id^="inicio"], [id^="sobremim"], [id^="skills"], [id^="projeto"], [id^="experiencias"], [id^="solicitar_projetos"]');
             elementos.forEach(function(elemento) {
                 elemento.style.display = "none";
             });
-            
+
             var divSelecionada = document.getElementById(id);
             if (divSelecionada) {
                 divSelecionada.style.display = "block";
